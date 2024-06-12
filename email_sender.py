@@ -29,8 +29,8 @@ def send_email(sender_email, sender_password, recipient_email, subject, body):
     server.quit()
 
 # Example usage:
-sender_email = 'auralex99@gmail.com'
-recipient_email = 'abudu.m1700302@st.futminna.edu.ng.com'
+sender_email = 'gervanz.ix@gmail.com'
+recipient_email = 'auralex99@gmail.com'
 subject = 'Test Email'
 body = 'This is a test email sent from Python.'
 
