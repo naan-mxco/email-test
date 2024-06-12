@@ -19,7 +19,7 @@ jobs:
           python-version: 3.8  # Choose the Python version you want to use
 
       - name: Run Python Script
-        run: python email_sender.py
+        run: python ../../../email_sender.py
         env:
           SENDER_EMAIL: your_email@gmail.com  # Replace with your sender email address
           RECIPIENT_EMAIL: recipient_email@example.com  # Replace with recipient email address
