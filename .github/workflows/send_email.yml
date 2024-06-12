@@ -1,0 +1,29 @@
+name: Send Email
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on pushes to the main branch
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8  # Choose the Python version you want to use
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt  # If you have any dependencies
+
+      - name: Run Python Script
+        run: python send_email.py
+        env:
+          SENDER_EMAIL: your_email@gmail.com  # Replace with your sender email address
+          RECIPIENT_EMAIL: recipient_email@example.com  # Replace with recipient email address
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}  # Use GitHub secret for email password
